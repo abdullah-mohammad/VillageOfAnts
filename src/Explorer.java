@@ -20,7 +20,7 @@ public class Explorer extends Ant{
 				if(this.getPosition() == 0){
 					
 				}
-				else if (this.getPosition() > 0 && this.getPosition() < colonial.getLocations().getLocations()[this.getSiteChoix()].getDistance()) {
+				else if (this.getPosition() > 0 && this.getPosition() < colonial.getLocations().getLocations()[this.getSiteChoice()].getDistance()) {
 					
 				}
 				else{
@@ -29,7 +29,7 @@ public class Explorer extends Ant{
 			}
 			else{
 				
-				if (this.getPosition() <= colonial.getLocations().getLocations()[this.getSiteChoix()].getDistance() && this.getPosition() > 0){
+				if (this.getPosition() <= colonial.getLocations().getLocations()[this.getSiteChoice()].getDistance() && this.getPosition() > 0){
 					
 				} 
 				else {

@@ -10,11 +10,8 @@ public class Lancher {
 		
 		for (int i=0 ; i < 5 ; i++) {
 			colonial.getNumberAnt().put(colonial.getIndexAnt(), new Worker(colonial));
-			colonial.getNumberAnt().put(colonial.getIndexAnt(), new Soldier(colonial));
-			colonial.getNumberAnt().put(colonial.getIndexAnt(), new Healer(colonial));
-			colonial.getNumberAnt().put(colonial.getIndexAnt(), new Explorer(colonial));
 		}
-		/*
+		
 		for (int i=0 ; i < 3 ; i++) {
 			colonial.getNumberAnt().put(colonial.getIndexAnt(), new Soldier(colonial));
 		}
@@ -26,8 +23,8 @@ public class Lancher {
 		for (int i=0; i < 1; i++){
 			colonial.getNumberAnt().put(colonial.getIndexAnt(), new Explorer(colonial));
 		}
-		*/
-		for (int i = 0; i < 15; i++){
+		
+		for (int i = 0; i < 150; i++){
 			System.out.println("-- Start of a new cycle --"+i);
 			for (int j=0 ; j < colonial.getNumberAnt().size(); j++){
 				colonial.getNumberAnt().get(j).newCycle(colonial);

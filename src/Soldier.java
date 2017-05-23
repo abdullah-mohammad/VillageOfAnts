@@ -21,25 +21,25 @@ public class Soldier extends Ant{
 				if(this.getPosition() == 0){
 					Random choice = new Random();
 					
-					this.setSiteChoix(choice.nextInt(colonial.getLocations().getLocations().length));
+					this.setSiteChoice(choice.nextInt(colonial.getLocations().getLocations().length));
 					this.setPosition(this.getPosition() + this.getSpeed());
 					this.setNumberCycles(this.getNumberCycles() - 1);
 					
-					System.out.println("The Ant  (" + this.getNameAnt() + ") Advance towards (" + colonial.getLocations().getLocations()[this.getSiteChoix()].getName() + ").");
+					System.out.println("The Ant  (" + this.getNameAnt() + ") Advance towards (" + colonial.getLocations().getLocations()[this.getSiteChoice()].getName() + ").");
 				
-				}else if(this.getPosition() > 0 && this.getPosition() < colonial.getLocations().getLocations()[this.getSiteChoix()].getDistance()){
+				}else if(this.getPosition() > 0 && this.getPosition() < colonial.getLocations().getLocations()[this.getSiteChoice()].getDistance()){
 					this.setPosition(this.getPosition() + this.getSpeed());
 					this.setNumberCycles(this.getNumberCycles() - 1);
 					
-					System.out.println("The Ant  (" + this.getNameAnt() + ") Advance towards (" + colonial.getLocations().getLocations()[this.getSiteChoix()].getName() + ").");
+					System.out.println("The Ant  (" + this.getNameAnt() + ") Advance towards (" + colonial.getLocations().getLocations()[this.getSiteChoice()].getName() + ").");
 					
 				}else{
-					this.setPosition(colonial.getLocations().getLocations()[this.getSiteChoix()].getDistance());
+					this.setPosition(colonial.getLocations().getLocations()[this.getSiteChoice()].getDistance());
 					this.setPosition(this.getNumberCycles() - 1);
 					this.setOutColonial(false);
 				}
 			}else{
-				if(this.getPosition() <= colonial.getLocations().getLocations()[this.getSiteChoix()].getDistance() && this.getPosition() > 0){
+				if(this.getPosition() <= colonial.getLocations().getLocations()[this.getSiteChoice()].getDistance() && this.getPosition() > 0){
 					
 					this.setPosition(this.getPosition() - this.getSpeed());
 					this.setNumberCycles(this.getNumberCycles() - 1);

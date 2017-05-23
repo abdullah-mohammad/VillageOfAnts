@@ -7,7 +7,7 @@ public abstract class Ant {
 	private String nameAnt;				// Ant name
 	private int numberCycles;			// Ant life points number
 	private int speed;					// Ant speed of movement.
-	private int siteChoix;					// Ant destination choice
+	private int siteChoice;					// Ant destination choice
 	private int position;				// position of the Ant
 	private boolean isActive;			// is the Ant injured or not
 	private boolean isSupported; 	 	// supported by the healers
@@ -17,12 +17,12 @@ public abstract class Ant {
 		this.nameAnt 		= nameAnt;			
 		this.numberCycles	= numberCycles;
 		this.speed 			= speed;
-		this.siteChoix 		= -1;
+		this.siteChoice 		= -1;
 		this.position 		= 0;
 		this.isActive 		= true;
 		this.isSupported 	= false;
 		this.isOutColonial 	= true;
-		//colonial.setIndexAnt(colonial.getIndexAnt() + 1);
+		colonial.setIndexAnt(colonial.getIndexAnt() + 1);
 	}
 	
 	public abstract void newCycle(Colonial colonial);
@@ -43,12 +43,12 @@ public abstract class Ant {
 		this.isActive = isActive;
 	}
 
-	public int getSiteChoix() {
-		return siteChoix;
+	public int getSiteChoice() {
+		return siteChoice;
 	}
 
-	public void setSiteChoix(int siteSelection) {
-		this.siteChoix = siteSelection;
+	public void setSiteChoice(int siteSelection) {
+		this.siteChoice = siteSelection;
 	}
 
 	public String getNameAnt() {

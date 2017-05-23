@@ -21,7 +21,7 @@ public class Injured extends Event{
 			int key = eNumberAnt.nextElement();
 			if(colonial.getNumberAnt().get(key) instanceof Healer){
 				if (!((Healer) colonial.getNumberAnt().get(key)).getActive()) {
-					colonial.getNumberAnt().get(key).setSiteChoix(this.getIndex());
+					colonial.getNumberAnt().get(key).setSiteChoice(this.getIndex());
 					((Healer) colonial.getNumberAnt().get(key)).setActive(true);
 					this.getSender().setSupported(true);
 					

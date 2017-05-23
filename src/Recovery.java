@@ -14,9 +14,9 @@ public class Recovery extends Event{
 	@Override
 	public void action(Colonial colonial) {
 		
-		colonial.getNumberAnt().remove(this.getSender().getSiteChoix());
+		colonial.getNumberAnt().remove(this.getSender().getSiteChoice());
 		((Healer) colonial.getNumberAnt().get(this.getIndex())).setActive(false);
-		this.getSender().setSiteChoix(0);
+		this.getSender().setSiteChoice(0);
 		
 	}
 	

@@ -27,25 +27,25 @@ public class Healer extends Ant{
 		if(this.isActive()){
 			if(this.getActive()){
 				if(this.isOutColonial()){
-					if(this.getPosition() < colonial.getNumberAnt().get(this.getSiteChoix()).getPosition()){
+					if(this.getPosition() < colonial.getNumberAnt().get(this.getSiteChoice()).getPosition()){
 						this.setPosition(this.getPosition() + this.getSpeed());
 						this.setNumberCycles(this.getNumberCycles() - 1);
-						System.out.println("The Ant  (" + this.getNameAnt() + ") Advance towards (" + colonial.getLocations().getLocations()[this.getSiteChoix()].getName() + ").");
+						System.out.println("The Ant  (" + this.getNameAnt() + ") Advance towards (" + colonial.getLocations().getLocations()[this.getSiteChoice()].getName() + ").");
 					}else{
-						System.out.println("The Ant  (" + this.getNameAnt() + ") Collects the ant " + colonial.getNumberAnt().get(this.getSiteChoix()).getNameAnt() + ".");
+						System.out.println("The Ant  (" + this.getNameAnt() + ") Collects the ant " + colonial.getNumberAnt().get(this.getSiteChoice()).getNameAnt() + ".");
 						this.setNumberCycles(this.getNumberCycles() - 1);
 						this.setOutColonial(false);
 					}
 					
 					if(this.getNumberCycles() <= 0){
-						colonial.getNumberAnt().get(this.getSiteChoix()).setSupported(false);
+						colonial.getNumberAnt().get(this.getSiteChoice()).setSupported(false);
 						this.setActive(false);
 					}	
 				}else{
 					if(this.getPosition() > 0){
 						this.setPosition(this.getPosition() - this.getSpeed());
 						this.setNumberCycles(this.getNumberCycles() - 1);
-						System.out.println("The Ant  (" + this.getNameAnt() + ") Return to the colonial with the ant (" + colonial.getNumberAnt().get(this.getSiteChoix()).getNameAnt() + ").");
+						System.out.println("The Ant  (" + this.getNameAnt() + ") Return to the colonial with the ant (" + colonial.getNumberAnt().get(this.getSiteChoice()).getNameAnt() + ").");
 					}else{
 						int index = -1;
 						
@@ -65,8 +65,8 @@ public class Healer extends Ant{
 					}
 					if(this.getNumberCycles() <= 0){
 						this.setActive(false);
-						colonial.getNumberAnt().get(this.getSiteChoix()).setPosition(this.getPosition());
-						colonial.getNumberAnt().get(this.getSiteChoix()).setSupported(false);
+						colonial.getNumberAnt().get(this.getSiteChoice()).setPosition(this.getPosition());
+						colonial.getNumberAnt().get(this.getSiteChoice()).setSupported(false);
 					}
 				}
 			}else{
